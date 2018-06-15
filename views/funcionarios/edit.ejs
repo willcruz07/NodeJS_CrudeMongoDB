@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Editar funcionário</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/funcionarios">Listar funcionários</a></h3>
+            <h1>Editar funcionários</h1>
+            <form action="/funcionarios/update/<%= funcionarios._id %>" method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Nome</td>
+                            <td><input type="text" name="nome" value="<%= funcionarios.nome %>"></td>
+                        </tr>
+                        <tr>
+                            <td>Endereço</td>
+                            <td><textarea nome="endereco"><%= funcionarios.endereco %></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Cargo</td>
+                            <td><input type="text" name="cargo" value="<%= funcionarios.cargo%>"></td>
+                        </tr>
+                        <tr>
+                            <td>Salário</td>
+                            <td><input type="number" name="salario" value="<%= funcionarios.salario%>"></td>
+                        </tr>
+                        <!-- <tr>
+                            <td colspan="2"><button type="submit">ATUALIZAR</button></td>                            
+                        </tr> -->
+                    </tbody>
+                </table>
+                <button type="submit">ATUALIZAR</button>
+            </form>
+        </div>
+    </body>
+</html>

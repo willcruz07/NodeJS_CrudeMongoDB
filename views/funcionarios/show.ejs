@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Informações dos Funcionários</title>
+        <link rel="stylesheet" type="txt/css" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/funcionarios">Lista de Funcionários</a></h3>
+            <h1>Informações</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Nome</td>
+                        <td>:</td>
+                        <td><%= funcionario.nome %></td>
+                    </tr>
+                    <tr>
+                        <td>Endereço</td>
+                        <td>:</td>
+                        <td><%= funcionario.endereco %></td>
+                    </tr>
+                    <tr>
+                        <td>Cargo</td>
+                        <td>:</td>
+                        <td><%= funcionario.cargo %></td>
+                    </tr>
+                    <tr>
+                        <td>Salário</td>
+                        <td>:</td>
+                        <td>$<%= funcionario.salario %></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <h3><a href="/funcionarios/edit/<%= funcionario._id %>">Editar</a></h3> -->
+            <form action="/funcionarios/delete/<%= funcionario._id %>" method="post">
+                <button type="submit">DELETAR</button>
+                <button type="submit" formmethod="GET" formaction="/funcionarios/edit/<%= funcionario._id %>">EDITAR</button>
+            </form>
+        </div>
+    </body>
+</html>

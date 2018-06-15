@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Criar funcionário</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/funcionarios">Listar funcionários</a></h3>
+            <h1>Criar novo funcionário</h1>
+            <form action="/funcionarios/save" method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Nome:</td>
+                            <td><input type="text" name="nome"></td>
+                        </tr>
+                        <tr>
+                            <td>Endereço:</td>
+                            <td><textarea name="endereco"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Cargo:</td>
+                            <td><input type="text" name="cargo"></td>
+                        </tr>
+                        <tr>
+                            <td>Salário:</td> 
+                            <td><input type="number" name="salario"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit">Salvar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

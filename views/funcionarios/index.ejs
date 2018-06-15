@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista de Funcionários</title>
+        <link rel="stylesheet" type="txt/css" href="/stylesheets/style.css">        
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/funcionarios/create">Cadastrar Funcionário</a></h3>
+            <h1>Funcionários</h1>
+            <% if (funcionarios.length > 0) { %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Funcionário</th>
+                            <th>Cargo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i = 0; i < funcionarios.length; i++) {%>
+                            <tr>
+                                <td><a href="/funcionarios/show/<%= funcionarios[i]._id%>"><%= funcionarios[i].nome%></a></td>
+                                <td><%= funcionarios[i].cargo %></td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            <% } else { %>
+                <div>
+                    Não há funcionários para exibir.
+                </div>
+            <% } %>
+        </div>
+    </body>
+</html>
