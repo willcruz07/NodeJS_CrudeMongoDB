@@ -58,7 +58,7 @@ funcionariosController.update = function(req, res){
             console.log(err)
             res.render('../views/funcionarios/edit', {funcionarios: req.body});
         }
-        res.redirect('/funcionarios/show' + funcionarios._id);
+        res.redirect('/funcionarios/show/' + funcionarios._id);
     });
 };
 
